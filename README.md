@@ -1,0 +1,2 @@
+# docs
+Inkchain Documentation
