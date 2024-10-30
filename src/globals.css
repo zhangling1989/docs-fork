@@ -62,3 +62,23 @@ a:has(div.ink-sidebar-item) {
   padding: 0 !important;
   background-color: transparent !important;
 }
+
+
+/* Target both the banner container and its text */
+.nextra-banner-container {
+  @apply text-white !important;
+}
+
+.nextra-banner-container a {
+  @apply text-white hover:text-white/80 no-underline !important;
+}
+
+/* Override the purple link styles specifically for the banner */
+.nextra-banner-container a:not(.nextra-sidebar-container a):not(nav a):not(.toc-link) {
+  @apply text-white hover:text-white/80 underline !important;
+}
+
+/* Ensure all text in banner is white, not just links */
+.nextra-banner-container {
+  @apply text-white !important;
+}
