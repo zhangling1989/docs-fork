@@ -59,16 +59,16 @@ const config: DocsThemeConfig = {
     component: Toc,
   },
   banner: {
-    key: "2.4-release",
+    key: "docs-wip",
     text: (
       <a
-        className="!text-magic-white dark:!text-magic-white"
-        href="https://blog.kraken.com/news/announcing-ink"
+        className="!text-white hover:!text-white/80"
+        href="/docs"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Preparing for Fault Proof Breaking Changes"
+        aria-label="Documentation Status"
       >
-        📌 UPDATE: Ink will launch and it will be awesome
+        🏗️ Documentation is under active development. Testnet is live!
       </a>
     ),
   },
