@@ -1,0 +1,130 @@
+{
+  "index": {
+    "title": "Getting Started",
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": false
+    }
+  },
+
+  "404": {
+    "title": "404",
+    "display": "hidden",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": false,
+      "pagination": false
+    }
+  },
+
+  "500": {
+    "title": "500",
+    "display": "hidden",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": false,
+      "pagination": false
+    }
+  },
+
+
+  "header_status": {
+    "title": "Status Page",
+    "type": "page",
+    "href": "https://status.inkonchain.com/",
+    "newWindow": true
+  },
+  "header_faucet": {
+    "title": "Faucets",
+    "type": "page",
+    "href": "/quick-start/faucets"
+  },
+
+  "+++ General": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- General": {
+    "title": "General",
+    "type": "separator"
+  },
+  "general": {
+    "title": "General",
+    "display": "children"
+  },
+
+
+  "+++ Quick Start": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Quick Start": {
+    "title": "Quick Start",
+    "type": "separator"
+  },
+  "quick-start": {
+    "title": "Quick Start",
+    "display": "children"
+  },
+
+  "+++ Build on Ink": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Build on Ink": {
+    "title": "Build on Ink",
+    "type": "separator"
+  },
+  "build": {
+    "title": "Build on Ink",
+    "display": "children"
+  },
+  "status": {
+    "title": "Status Page",
+    "href": "https://status.inkonchain.com/",
+    "newWindow": true
+  },
+
+  "+++ Use Ink": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Use Ink": {
+    "title": "Use Ink",
+    "type": "separator"
+  },
+  "use-ink": {
+    "title": "Use Ink",
+    "display": "children"
+  },
+
+  "+++ Work with Ink": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Work with Ink": {
+    "title": "Work with Ink",
+    "type": "separator"
+  },
+  "_badges": {
+    "display": "hidden",
+    "title": "Discord Badges"
+  },
+  "header_discord_invite": {
+    "title": "Community",
+    "href": "/quick-start/developer-community"
+  },
+  "contributing": {
+    "title": "Contribution Guide"
+  }
+}
