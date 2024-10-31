@@ -1,3 +1,105 @@
-# Remix
+# Getting Started with Remix IDE on INK
 
-@TODO
+This guide will walk you through deploying a smart contract on INK using Remix IDE, a popular browser-based development environment for Ethereum smart contracts.
+
+## What is Remix?
+
+Remix IDE is a powerful, open-source tool that helps you write, compile, deploy, and debug Solidity smart contracts. It's particularly useful for beginners as it requires no setup and runs directly in your browser.
+
+## Accessing Remix
+
+1. Open your web browser and navigate to [Remix IDE](https://remix.ethereum.org)
+2. You'll see the default workspace with some example contracts
+
+## Creating Your First Contract
+
+1. In the File Explorer (left sidebar), create a new file by clicking the "+" icon
+2. Name it `InkContract.sol` and add the following code:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+contract InkContract {
+    string public greeting = "Hello, Ink!";
+    
+    function setGreeting(string memory _greeting) public {
+        greeting = _greeting;
+    }
+}
+```
+
+## Compiling Your Contract
+
+1. Click on the "Solidity Compiler" tab in the left sidebar (icon looks like an "S")
+2. Make sure the compiler version matches your pragma statement (0.8.19)
+3. Click "Compile InkContract.sol"
+4. Look for a green checkmark indicating successful compilation
+
+## Connecting to INK Network
+
+1. Click on the "Deploy & Run Transactions" tab (icon looks like an "≡")
+2. In the "ENVIRONMENT" dropdown, select "Injected Provider"
+3. Configure your preferred Web3 wallet with INK Sepolia network details:
+   - Network Name: INK Sepolia
+   - RPC URL: https://rpc-gel-sepolia.inkonchain.com/
+   - Chain ID: 763373
+   - Currency Symbol: INK
+   - Block Explorer URL: https://explorer-sepolia.inkonchain.com/
+
+Most modern Web3 wallets will allow you to add custom networks through their settings. Look for options like "Add Network", "Custom RPC", or "Networks" in your wallet's interface.
+
+## Deploying Your Contract
+
+1. Before deploying, ensure:
+   - Your Web3 wallet is connected to INK Sepolia network
+   - You have sufficient INK tokens for deployment
+   - Your wallet is connected to Remix IDE (accept the connection prompt if shown)
+
+2. In the "Deploy & Run Transactions" tab:
+   - Select "InkContract" from the "CONTRACT" dropdown
+   - Click "Deploy"
+   - Review and confirm the transaction in your wallet
+
+3. Once deployed, you'll see your contract appear under "Deployed Contracts"
+
+## Interacting with Your Contract
+
+1. Under "Deployed Contracts", expand your contract to see its functions
+2. You can:
+   - Read the current greeting by clicking "greeting"
+   - Set a new greeting by:
+     - Typing a new message in the "setGreeting" input field
+     - Clicking "transact"
+     - Confirming the transaction in your wallet
+
+## Verifying Your Contract
+
+1. Go to [INK Blockscout](https://explorer-sepolia.inkonchain.com)
+2. Find your contract by its address
+3. Click "Verify & Publish"
+4. Fill in the verification details:
+   - Choose "Solidity (Single file)"
+   - Select the same compiler version used in Remix
+   - Set optimization to 200 runs
+   - Paste your contract code
+   - Click "Verify & Publish"
+
+## Tips and Best Practices
+
+- Always test your contracts in Remix's JavaScript VM before deploying to testnet
+- Use the Remix debugger to troubleshoot failed transactions
+- Save your contract's address after deployment
+- Keep your wallet secure and never share your private keys
+
+## Useful Features in Remix
+
+- **Debugger**: Helps you understand why transactions fail
+- **Static Analysis**: Checks your code for common issues
+- **Gas Estimation**: Shows approximate deployment costs
+- **Console**: Displays transaction logs and debugging information
+
+## Next Steps
+
+- Explore [Remix Documentation](https://remix-ide.readthedocs.io/) for advanced features
+- Learn about [Solidity](https://docs.soliditylang.org/) programming
