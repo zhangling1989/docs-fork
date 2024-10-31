@@ -77,6 +77,19 @@
     "display": "children"
   },
 
+  "+++ Use Ink": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Use Ink": {
+    "title": "Use Ink",
+    "type": "separator"
+  },
+  "use-ink": {
+    "title": "Use Ink",
+    "display": "children"
+  },
+
   "+++ Build on Ink": {
     "title": "",
     "type": "separator"
@@ -93,19 +106,6 @@
     "title": "Status Page",
     "href": "https://status.inkonchain.com/",
     "newWindow": true
-  },
-
-  "+++ Use Ink": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Use Ink": {
-    "title": "Use Ink",
-    "type": "separator"
-  },
-  "use-ink": {
-    "title": "Use Ink",
-    "display": "children"
   },
 
   "+++ Work with Ink": {
