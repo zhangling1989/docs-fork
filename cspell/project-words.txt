@@ -115,3 +115,6 @@ preinstalls
 multisignatures
 baselayer
 Smol
+foundryup
+inksepolia
+INKSEPOLIA
