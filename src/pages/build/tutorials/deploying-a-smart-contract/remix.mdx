@@ -39,25 +39,27 @@ contract InkContract {
 ## Connecting to INK Network
 
 1. Click on the "Deploy & Run Transactions" tab (icon looks like an "≡")
-2. In the "ENVIRONMENT" dropdown, select "Injected Provider - MetaMask"
-3. Configure MetaMask for INK Sepolia:
+2. In the "ENVIRONMENT" dropdown, select "Injected Provider"
+3. Configure your preferred Web3 wallet with INK Sepolia network details:
    - Network Name: INK Sepolia
    - RPC URL: https://rpc-gel-sepolia.inkonchain.com/
    - Chain ID: 763373
    - Currency Symbol: INK
-   - Block Explorer URL: https://explorer-sepolia.inkonchain.com/api/v2
+   - Block Explorer URL: https://explorer-sepolia.inkonchain.com/
+
+Most modern Web3 wallets will allow you to add custom networks through their settings. Look for options like "Add Network", "Custom RPC", or "Networks" in your wallet's interface.
 
 ## Deploying Your Contract
 
-1. Ensure your MetaMask wallet:
-   - Is connected to INK Sepolia network
-   - Has sufficient INK tokens for deployment
-   - Is connected to Remix IDE
+1. Before deploying, ensure:
+   - Your Web3 wallet is connected to INK Sepolia network
+   - You have sufficient INK tokens for deployment
+   - Your wallet is connected to Remix IDE (accept the connection prompt if shown)
 
 2. In the "Deploy & Run Transactions" tab:
    - Select "InkContract" from the "CONTRACT" dropdown
    - Click "Deploy"
-   - Confirm the transaction in MetaMask
+   - Review and confirm the transaction in your wallet
 
 3. Once deployed, you'll see your contract appear under "Deployed Contracts"
 
@@ -69,7 +71,7 @@ contract InkContract {
    - Set a new greeting by:
      - Typing a new message in the "setGreeting" input field
      - Clicking "transact"
-     - Confirming the transaction in MetaMask
+     - Confirming the transaction in your wallet
 
 ## Verifying Your Contract
 
@@ -88,7 +90,7 @@ contract InkContract {
 - Always test your contracts in Remix's JavaScript VM before deploying to testnet
 - Use the Remix debugger to troubleshoot failed transactions
 - Save your contract's address after deployment
-- Keep your MetaMask wallet secure and never share your private keys
+- Keep your wallet secure and never share your private keys
 
 ## Useful Features in Remix
 
