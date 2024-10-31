@@ -3,7 +3,10 @@
         "title": "Bridges",
         "href": "/build/tools/bridges"
     },
-    "crosschain": "Crosschain",
+    "crosschain": {
+        "title": "Crosschain",
+        "href": "/build/tools/crosschain"
+    },
     "block-explorers": {
         "title": "Block Explorers",
         "href": "/build/tools/block-explorers"

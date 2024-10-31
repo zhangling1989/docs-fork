@@ -9,6 +9,7 @@
     },
     "block-explorers": "Block Explorers",
     "indexers": "Indexers",
-    "vrf": "VRF"
+    "vrf": "VRF",
+    "crosschain": "Crosschain"
   }
 
