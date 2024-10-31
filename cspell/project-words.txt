@@ -114,3 +114,4 @@ Permissioned
 preinstalls
 multisignatures
 baselayer
+Smol
