@@ -83,7 +83,7 @@ untar
 NVME
 nextra
 Gelato
-Quicknode
+QuickNode
 Superchain
 Seplia
 userbase
