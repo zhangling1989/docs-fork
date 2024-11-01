@@ -17,9 +17,6 @@ export async function isInkSepoliaNetwork(): Promise<boolean> {
     const chainId = await (window as any).ethereum.request({
       method: "eth_chainId",
     });
-    console.log("chainId from MetaMask:", chainId);
-    console.log("expected chainId:", networkParams.chainId);
-    // Convert both to lowercase for comparison
     return chainId.toLowerCase() === networkParams.chainId.toLowerCase();
   } catch (error) {
     console.error("Error checking network:", error);
