@@ -1,4 +1,5 @@
 import { AddNetworkButton } from "../../components/AddNetworkButton";
+import CopyableCode from '@/components/CopyableCode'
 
 # Get Connected
 
@@ -13,8 +14,8 @@ The button below will add the Ink Sepolia network to your wallet:
 | -------------------- | -------------------------------------------------------------- |
 | Network Name         | Ink Sepolia                                                    |
 | Description          | Ink's public testnet                                           |
-| RPC Endpoint (HTTPS) | `https://rpc-gel-sepolia.inkonchain.com`                       |
-| RPC Endpoint (WSS)   | `wss://ws-gel-sepolia.inkonchain.com`                          |
+| RPC Endpoint (HTTPS) | <CopyableCode code="https://rpc-gel-sepolia.inkonchain.com" /> |
+| RPC Endpoint (WSS)   | <CopyableCode code="wss://ws-gel-sepolia.inkonchain.com" />    |
 | Chain ID             | 763373                                                         |
 | Currency Symbol      | ETH                                                            |
 | Block Explorer       | https://explorer-sepolia.inkonchain.com                        |
@@ -26,8 +27,9 @@ The button below will add the Ink Sepolia network to your wallet:
     - We suggest having at least 0.05 ETH for standard deployments on Ink.
     - You can request Ink Sepolia ETH using our [Faucets](/quick-start/faucets).
 1. We recommend using a development framework like [Foundry](https://book.getfoundry.sh/) or [Hardhat](https://hardhat.org/)
-    - @TODO [Guide to deploy a contract using Foundry]()
-    - @TODO [Guide to deploy a contract using Hardhat]()
+    - [Guide to deploy a contract using Foundry](/build/tutorials/deploying-a-smart-contract/foundry)
+    - [Guide to deploy a contract using Hardhat](/build/tutorials/deploying-a-smart-contract/hardhat)
+    - [Guide to deploy a contract using Remix](/build/tutorials/deploying-a-smart-contract/remix)
 
 ## Connecting to Ink
 
