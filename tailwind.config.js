@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '6xl': '3rem',  // This is a very large radius
+      },
       colors: {
         magic: {
           purple: "#7132F5",
