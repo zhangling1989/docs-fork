@@ -44,7 +44,7 @@ const config: DocsThemeConfig = {
     },
   },
   sidebar: {
-    defaultMenuCollapseLevel: 3,
+    defaultMenuCollapseLevel: 0,
     autoCollapse: true,
     titleComponent: SidebarTitleComponent,
   },
