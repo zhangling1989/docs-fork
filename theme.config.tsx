@@ -17,7 +17,7 @@ const config: DocsThemeConfig = {
     link: URLS.githubOrgUrl,
   },
   chat: {
-    link: URLS.discordUrl,
+    link: "https://discord.gg/inkonchain",
   },
   docsRepositoryBase: URLS.repositoryUrl,
   head: Head,
@@ -44,7 +44,7 @@ const config: DocsThemeConfig = {
     },
   },
   sidebar: {
-    defaultMenuCollapseLevel: 3,
+    defaultMenuCollapseLevel: 0,
     autoCollapse: true,
     titleComponent: SidebarTitleComponent,
   },

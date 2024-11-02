@@ -48,7 +48,7 @@ export const Toc: React.FC<TocProps> = ({ headings }) => {
           className="group text-xs flex items-center gap-1"
         >
           <PencilIcon className="size-4 toc-link" />
-          <span className="toc-link">Edit this page on Github</span>
+          <span className="toc-link">Edit this page on GitHub</span>
         </Link>
       </div>
     </div>
