@@ -6,7 +6,7 @@ const networkParams = {
     symbol: "ETH",
     decimals: 18,
   },
-  rpcUrls: ["https://rpc-gel-sepolia.inkonchain.com"],
+  rpcUrls: ["https://rpc-qnd-sepolia.inkonchain.com"],
   blockExplorerUrls: ["https://explorer-sepolia.inkonchain.com/"],
 };
 
