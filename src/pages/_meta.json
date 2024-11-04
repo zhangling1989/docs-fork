@@ -50,81 +50,41 @@
     "href": "/quick-start/faucets"
   },
 
-  "+++ General": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- General": {
-    "title": "General",
-    "type": "separator"
-  },
+
   "general": {
-    "title": "General",
-    "display": "children"
+    "title": "General"
   },
 
 
-  "+++ Quick Start": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Quick Start": {
-    "title": "Quick Start",
-    "type": "separator"
-  },
   "quick-start": {
-    "title": "Quick Start",
-    "display": "children"
+    "title": "Quick Start"
   },
 
-  "+++ Use Ink": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Use Ink": {
-    "title": "Use Ink",
-    "type": "separator"
-  },
   "use-ink": {
-    "title": "Use Ink",
-    "display": "children"
+    "title": "Use Ink"
   },
 
-  "+++ Build on Ink": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Build on Ink": {
-    "title": "Build on Ink",
-    "type": "separator"
-  },
   "build": {
-    "title": "Build on Ink",
-    "display": "children"
+    "title": "Build on Ink"
   },
+
+
+  "work-ink": {
+    "title": "Work with Ink"
+  },
+
+  "---": {
+    "type": "separator"
+  },
+
   "status": {
     "title": "Status Page",
     "href": "https://status.inkonchain.com/",
     "newWindow": true
   },
 
-  "+++ Work with Ink": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Work with Ink": {
-    "title": "Work with Ink",
-    "type": "separator"
-  },
   "_badges": {
     "display": "hidden",
     "title": "Discord Badges"
-  },
-  "header_discord_invite": {
-    "title": "Community",
-    "href": "/quick-start/developer-community"
-  },
-  "contributing": {
-    "title": "Contribution Guide"
   }
 }
