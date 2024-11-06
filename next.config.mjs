@@ -29,7 +29,11 @@ const config = withNextra({
       '@': path.join(__dirname, 'src'),
     }
     return config
-  }
+  },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    mdxRs: true,
+  },
 })
 
 export default config

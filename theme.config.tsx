@@ -63,7 +63,7 @@ const config: DocsThemeConfig = {
     text: (
       <a
         className="!text-white hover:!text-white/80"
-        href="/docs"
+        href="/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Documentation Status"
