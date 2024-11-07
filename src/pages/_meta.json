@@ -70,7 +70,10 @@
 
 
   "work-ink": {
-    "title": "Work with Ink"
+    "title": "Work with Ink",
+    "theme": {
+      "pagination": true
+    }
   },
 
   "---": {
@@ -80,6 +83,9 @@
   "status": {
     "title": "Status Page",
     "href": "https://status.inkonchain.com/",
-    "newWindow": true
+    "newWindow": true,
+    "theme": {
+      "pagination": false
+    }
   }
 }
