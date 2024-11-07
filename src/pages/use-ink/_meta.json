@@ -1,18 +1,6 @@
 {
-    "bridges": {
-        "title": "Bridges",
-        "href": "/build/tools/bridges"
-    },
-    "crosschain": {
-        "title": "Crosschain",
-        "href": "/build/tools/crosschain"
-    },
-    "block-explorers": {
-        "title": "Block Explorers",
-        "href": "/build/tools/block-explorers"
-    },
-    "multisig": {
-        "title": "Multisig",
-        "href": "/build/tools/multisig"
-    }
+    "bridges": "Bridges",
+    "crosschain": "Crosschain",
+    "block-explorers": "Block Explorers",
+    "multisig": "Multisig"
 }

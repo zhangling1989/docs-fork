@@ -1,7 +1,6 @@
 {
-    "header_discord_invite": {
-        "title": "Community",
-        "href": "/quick-start/developer-community"
+    "community": {
+        "title": "Community"
         },
     "contributing": {
         "title": "Contribution Guide"
