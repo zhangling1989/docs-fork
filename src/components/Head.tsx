@@ -11,7 +11,7 @@ export const Head = () => {
   const description =
     frontMatter.description ||
     "Comprehensive documentation for Ink, a cutting-edge Layer 2 (L2) blockchain built on Optimism's Superchain. Learn how to build, integrate, and leverage Ink's DeFi capabilities.";
-  const ogImage = frontMatter.image || `${baseUrl}/logo/ink-the-future.png`;
+  const ogImage = frontMatter.image || `${baseUrl}/logo/build-the-future.png`;
 
   return (
     <>
