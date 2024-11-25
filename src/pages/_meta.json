@@ -79,7 +79,9 @@
   "---": {
     "type": "separator"
   },
-
+  "faq": {
+    "title": "FAQ"
+  },
   "status": {
     "title": "Status Page",
     "href": "https://status.inkonchain.com/",
