@@ -33,10 +33,16 @@ Don't want to run your own node? [QuickNode](https://www.quicknode.com/chains/in
 To run a node, your system should meet these minimum specifications:
 
 - 8-Core CPU
-- 8 GB RAM or more
-- SSD drive (NVME recommended) with at least 100GB storage
+- 16 GB RAM or more
+- Locally attached NVMe SSD with sufficient storage:
+  - **Full Node:** Minimum 3TB recommended
+  - **Archive Node:** Minimum 12TB recommended
 
-Running an archive node will demand additional disk space over time. More CPU and RAM will enhance performance with higher RPC traffic.
+<Callout emoji="💡" type="info">
+Chain data grows continuously with network activity. We recommend monitoring your storage usage and planning for additional capacity over time.
+</Callout>
+
+Running an archive node will require significantly more resources. For optimal performance with higher RPC traffic, consider scaling up CPU and RAM beyond the minimum specifications.
 
 ### Software Prerequisites
 
