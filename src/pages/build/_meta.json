@@ -1,10 +1,9 @@
 {
+  "getting-started": "Getting Started",
   "onchain-clients": "Onchain Clients",
-  "oracles": "Oracles",
   "run-an-ink-node": "Running Ink Nodes",
-  "fees": "Fees",
+  "oracles": "Oracles",
+  "transaction-fees": "Transaction Fees",
   "ink-kit": "Ink Kit",
-  "tutorials": "Tutorials",
-  "tools": "Tools",
-  "useful-info": "Useful Information"
+  "tutorials": "Tutorials"
 }

@@ -11,7 +11,7 @@ import { InkLogo } from "@/icons/InkLogo";
 import { URLS } from "@/utils/urls";
 
 const config: DocsThemeConfig = {
-  logo: <InkLogo/>,
+  logo: <InkLogo />,
   darkMode: false,
   project: {
     link: URLS.githubOrgUrl,
@@ -44,7 +44,7 @@ const config: DocsThemeConfig = {
     },
   },
   sidebar: {
-    defaultMenuCollapseLevel: 3,
+    defaultMenuCollapseLevel: 1,
     autoCollapse: true,
     titleComponent: SidebarTitleComponent,
   },
