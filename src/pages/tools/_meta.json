@@ -7,7 +7,7 @@
   "indexers": "Indexers",
   "multisig": "Multisig",
   "oracles": "Oracles",
-  "rpcs": "RPCs",
+  "rpc": "RPC",
   "security": "Security",
   "vrf": "VRF"
 }
