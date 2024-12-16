@@ -1,13 +1,13 @@
 const networkParams = {
-  chainId: "0xBA5ED", // 763373 in hexadecimal
-  chainName: "Ink Sepolia",
+  chainId: "0xdef1", // 57073 in hexadecimal
+  chainName: "Ink Mainnet",
   nativeCurrency: {
     name: "Ether",
     symbol: "ETH",
     decimals: 18,
   },
-  rpcUrls: ["https://rpc-qnd-sepolia.inkonchain.com"],
-  blockExplorerUrls: ["https://explorer-sepolia.inkonchain.com/"],
+  rpcUrls: ["https://rpc-qnd.inkonchain.com"],
+  blockExplorerUrls: ["https://explorer.inkonchain.com/"],
 };
 
 export async function isInkSepoliaNetwork(): Promise<boolean> {
@@ -24,7 +24,7 @@ export async function isInkSepoliaNetwork(): Promise<boolean> {
   }
 }
 
-export async function switchToInkSepolia(): Promise<void> {
+export async function switchToInkMainnet(): Promise<void> {
   if (!(window as any).ethereum) return;
 
   try {

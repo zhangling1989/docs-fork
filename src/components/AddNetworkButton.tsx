@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { isInkSepoliaNetwork, switchToInkSepolia } from "@/utils/add-network";
+import { isInkSepoliaNetwork, switchToInkMainnet } from "@/utils/add-network";
 
 import { Button } from "./Button";
 
@@ -49,8 +49,8 @@ export const AddNetworkButton = () => {
         </div>
       ) : (
         <div className="space-y-4">
-          <Button variant="primary" onClick={switchToInkSepolia}>
-            Add Ink Sepolia Network
+          <Button variant="primary" onClick={switchToInkMainnet}>
+            Add Ink Mainnet Network
           </Button>
           <div className="text-sm text-gray-600 dark:text-gray-400 italic">
             Note: Automatic network addition may not work with all wallets. See
