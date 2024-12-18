@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { isNetworkAdded, addNetwork, NetworkType } from "@/utils/add-network";
+import { addNetwork, isNetworkAdded, NetworkType } from "@/utils/add-network";
 
 import { Button } from "./Button";
 
