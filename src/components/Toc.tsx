@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { PencilIcon } from "@/icons/Pencil";
-import { ThumpUpIcon } from "@/icons/ThumpUp";
+import { ThumbUpIcon } from "@/icons/ThumbUp";
 import { URLS } from "@/utils/urls";
 
 interface Heading {
@@ -39,7 +39,7 @@ export const Toc: React.FC<TocProps> = ({ headings }) => {
           href={URLS.discordUrl}
           className="group text-xs flex items-center gap-1"
         >
-          <ThumpUpIcon className="size-4 toc-link" />
+          <ThumbUpIcon className="size-4 toc-link" />
           <span className="toc-link">Give feedback on Discord</span>
         </Link>
 
