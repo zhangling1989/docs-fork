@@ -1,9 +1,12 @@
 {
+  "getting-started": "Getting Started",
   "onchain-clients": "Onchain Clients",
-  "oracles": "Oracles",
-  "run-an-ink-node": "Running Ink Nodes",
-  "fees": "Fees",
-  "tutorials": "Tutorials",
-  "tools": "Tools",
-  "useful-info": "Useful Information"
+  "run-an-ink-node": {
+    "title": "Running Ink Nodes",
+    "href": "https://github.com/inkonchain/node",
+    "newWindow": true
+  },
+  "transaction-fees": "Transaction Fees",
+  "ink-kit": "Ink Kit",
+  "tutorials": "Tutorials"
 }
