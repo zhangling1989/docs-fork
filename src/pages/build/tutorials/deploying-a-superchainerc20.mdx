@@ -1,0 +1,69 @@
+# Deploying a SuperchainERC20
+
+This guide will walk you through deploying your own ERC20 token across the OP Superchain using the SuperchainERC20 starter kit.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+First, you'll need to install Foundry, as the project requires `anvil`. Follow the [Foundry installation guide](https://book.getfoundry.sh/getting-started/installation).
+
+### Setup Steps
+
+1. **Clone the repository**
+   ```sh
+   git clone git@github.com:ethereum-optimism/superchainerc20-starter.git
+   cd superchainerc20-starter
+   ```
+
+2. **Install dependencies**
+   ```sh
+   pnpm i
+   ```
+
+3. **Set up environment files**
+   ```sh
+   pnpm init:env
+   ```
+
+4. **Start the development environment**
+   ```sh
+   pnpm dev
+   ```
+
+5. **Update RPC URLs**
+   ```sh
+   pnpm contracts:update:rpcs
+   ```
+
+6. **Configure deployment settings**
+   Create or update your deployment configuration file:
+   ```toml
+   [deploy_config]
+   salt = "ethers phoenix"
+   chains = ["sepolia/ink"]
+
+   [token]
+   owner_address = "<YOUR ADDRESS>"    # Your wallet address
+   name = "<YOUR TOKEN NAME>"          # The name of your token
+   symbol = "<YOUR TOKEN SYMBOL>"      # Your token's symbol (e.g., "OPT")
+   decimals = 18                       # Number of decimal places (18 is standard)
+   ```
+   Save this to `packages/contracts/configs/deploy-config.toml`
+
+7. **Set up your deployer private key**
+   ```sh
+   echo 'DEPLOYER_PRIVATE_KEY=<YOUR PRIVATE KEY>' > packages/contracts/.env
+   ```
+   ⚠️ Never share or commit your private key. Make sure your wallet has enough funds for deployment.
+
+8. **Deploy your token**
+   ```sh
+   pnpm contracts:deploy:token
+   ```
+
+## What's Next?
+
+After successful deployment, your token will be live on the specified chains in your deploy config. You can verify your token on block explorers and start interacting with it!
+
+For troubleshooting or questions, join our [Discord community](http://discord.gg/inkonchain) or check the [SuperchainERC20 Starter Kit repository](https://github.com/ethereum-optimism/superchainerc20-starter).
