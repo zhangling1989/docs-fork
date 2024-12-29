@@ -1,10 +1,10 @@
-import CopyableCode from '@/components/CopyableCode'
-import BridgesContent from '@/content/shared/bridges-content.mdx'
+import CopyableCode from "@/components/CopyableCode";
+import BridgesContent from "@/content/shared/bridges-content.mdx";
 
 export function BridgesContentWrapper() {
   const components = {
-    CopyableCode
-  }
+    CopyableCode,
+  };
 
-  return <BridgesContent components={components} />
+  return <BridgesContent components={components} />;
 }
