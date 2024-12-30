@@ -1,10 +1,10 @@
-import CopyableCode from '@/components/CopyableCode'
-import BlockExplorersContent from '@/content/shared/block-explorers-content.mdx'
+import CopyableCode from "@/components/CopyableCode";
+import BlockExplorersContent from "@/content/shared/block-explorers-content.mdx";
 
 export function BlockExplorersContentWrapper() {
   const components = {
-    CopyableCode
-  }
+    CopyableCode,
+  };
 
-  return <BlockExplorersContent components={components} />
+  return <BlockExplorersContent components={components} />;
 }

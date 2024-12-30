@@ -1,10 +1,10 @@
-import CopyableCode from '@/components/CopyableCode'
-import CrosschainContent from '@/content/shared/crosschain-content.mdx'
+import CopyableCode from "@/components/CopyableCode";
+import CrosschainContent from "@/content/shared/crosschain-content.mdx";
 
 export function CrosschainContentWrapper() {
   const components = {
-    CopyableCode
-  }
+    CopyableCode,
+  };
 
-  return <CrosschainContent components={components} />
+  return <CrosschainContent components={components} />;
 }
