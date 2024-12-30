@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 interface CopyButtonProps {
   text: string;
   className?: string;
 }
 
-export default function CopyButton({ text, className = '' }: CopyButtonProps) {
+export default function CopyButton({ text, className = "" }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -16,7 +16,7 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy:', err);
+      console.error("Failed to copy:", err);
     }
   };
 
@@ -25,10 +25,10 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
       onClick={handleCopy}
       className={`ml-2 p-1 rounded transition-colors h-[24px] min-w-[24px] flex items-center justify-center text-xs ${
         copied
-          ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100'
-          : 'bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400'
+          ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100"
+          : "bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400"
       } ${className}`}
-      aria-label={copied ? 'Copied!' : 'Copy to clipboard'}
+      aria-label={copied ? "Copied!" : "Copy to clipboard"}
     >
       {copied ? (
         <span className="px-1">Copied!</span>

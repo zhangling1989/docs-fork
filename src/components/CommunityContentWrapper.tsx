@@ -1,10 +1,10 @@
-import CopyableCode from '@/components/CopyableCode'
-import CommunityContent from '@/content/shared/community-content.mdx'
+import CopyableCode from "@/components/CopyableCode";
+import CommunityContent from "@/content/shared/community-content.mdx";
 
 export function CommunityContentWrapper() {
   const components = {
-    CopyableCode
-  }
+    CopyableCode,
+  };
 
-  return <CommunityContent components={components} />
+  return <CommunityContent components={components} />;
 }
