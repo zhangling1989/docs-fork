@@ -112,8 +112,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0
       remark-lint-unordered-list-marker-style:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       remark-mdx:
         specifier: 3.1.0
         version: 3.1.0
@@ -5015,8 +5015,8 @@ packages:
   remark-lint-table-pipes@5.0.0:
     resolution: {integrity: sha512-e7jzAScDrt5+eMomh099TZJBN2K9ldDxBu9iYhNu5C0YsdAvnckJkgilsuClxFpmx4LCVYaX0EGbt/hQ3LB3xg==}
 
-  remark-lint-unordered-list-marker-style@4.0.0:
-    resolution: {integrity: sha512-XlP4Wr4KJNovyWVv0H5axfUlF23iE9Kt2SxaVq4+ieum5YcMmKE6KsL+aqt3kiJb60SH1u6a0bxKFvdM/9riOA==}
+  remark-lint-unordered-list-marker-style@4.0.1:
+    resolution: {integrity: sha512-HMrVQC0Qbr8ktSy+1lJGRGU10qecL3T14L6s/THEQXR5Tk0wcsLLG0auNvB4r2+H+ClhVO/Vnm1TEosh1OCsfw==}
 
   remark-lint@10.0.0:
     resolution: {integrity: sha512-E8yHHDOJ8b+qI0G49BRu24pe8t0fNNBWv8ENQJpCGNrVeTeyBIGEbaUe1yuF7OG8faA6PVpcN/pqWjzW9fcBWQ==}
@@ -12382,11 +12382,11 @@ snapshots:
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
 
-  remark-lint-unordered-list-marker-style@4.0.0:
+  remark-lint-unordered-list-marker-style@4.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-phrasing: 4.1.0
-      unified-lint-rule: 3.0.0
+      unified-lint-rule: 3.0.1
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
       vfile-message: 4.0.2
