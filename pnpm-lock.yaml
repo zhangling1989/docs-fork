@@ -109,8 +109,8 @@ importers:
         specifier: 4.1.1
         version: 4.1.1
       remark-lint-table-pipes:
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 5.0.1
+        version: 5.0.1
       remark-lint-unordered-list-marker-style:
         specifier: 4.0.1
         version: 4.0.1
@@ -5003,8 +5003,8 @@ packages:
   remark-lint-table-pipe-alignment@4.1.1:
     resolution: {integrity: sha512-9VxivIJaDonrd/Jgkim1oYQ5MIqhWmyJggr2AqtiizwqxT4epRsWmLOz+/sk7PtTGoT/MtwndhlbM3lxuVXFow==}
 
-  remark-lint-table-pipes@5.0.0:
-    resolution: {integrity: sha512-e7jzAScDrt5+eMomh099TZJBN2K9ldDxBu9iYhNu5C0YsdAvnckJkgilsuClxFpmx4LCVYaX0EGbt/hQ3LB3xg==}
+  remark-lint-table-pipes@5.0.1:
+    resolution: {integrity: sha512-oOkRC0WRRDwvodfffGafoBFBTGwy9udQgKtxN53apmZpOmaUAxTi833ite0jMo078+LehNftO5bxrElZ9EQUlQ==}
 
   remark-lint-unordered-list-marker-style@4.0.1:
     resolution: {integrity: sha512-HMrVQC0Qbr8ktSy+1lJGRGU10qecL3T14L6s/THEQXR5Tk0wcsLLG0auNvB4r2+H+ClhVO/Vnm1TEosh1OCsfw==}
@@ -12332,12 +12332,12 @@ snapshots:
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
 
-  remark-lint-table-pipes@5.0.0:
+  remark-lint-table-pipes@5.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
       mdast-util-phrasing: 4.1.0
-      unified-lint-rule: 3.0.0
+      unified-lint-rule: 3.0.1
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
 
