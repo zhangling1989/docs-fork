@@ -97,14 +97,14 @@ importers:
         specifier: 3.15.4
         version: 3.15.4
       remark-lint-heading-style:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       remark-lint-list-item-indent:
         specifier: 4.0.0
         version: 4.0.0
       remark-lint-table-cell-padding:
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 5.1.1
+        version: 5.1.1
       remark-lint-table-pipe-alignment:
         specifier: 4.1.1
         version: 4.1.1
@@ -4946,8 +4946,8 @@ packages:
   remark-lint-hard-break-spaces@4.1.1:
     resolution: {integrity: sha512-AKDPDt39fvmr3yk38OKZEWJxxCOOUBE+96AsBfs+ExS5LW6oLa9041X5ahFDQHvHGzdoremEIaaElursaPEkNg==}
 
-  remark-lint-heading-style@4.0.0:
-    resolution: {integrity: sha512-dQ6Jul5K0+aNUvrq4W7H0+osSoC9hsmwHZqBFq000+eMP/hWJqI8tuudw1rap8HHYuOsKLRbB5q+Fr7G+3Vw+Q==}
+  remark-lint-heading-style@4.0.1:
+    resolution: {integrity: sha512-+rUpJ/N2CGC5xPgZ18XgsCsUBtadgEhdTi0BJPrsFmHPzL22BUHajeg9im8Y7zphUcbi1qFiKuxZd2nzDgZSXQ==}
 
   remark-lint-link-title-style@4.0.1:
     resolution: {integrity: sha512-MtmnYrhjhRXR0zeiyYf/7GBlUF5KAPypJb345KjyDluOhI4Wj4VAXvVQuov/MFc3y8p/1yVwv3QDYv6yue8/wQ==}
@@ -4997,8 +4997,8 @@ packages:
   remark-lint-strong-marker@4.0.1:
     resolution: {integrity: sha512-KaGtj/OWEP4eoafevnlp3NsEVwC7yGEjBJ6uFMzfjNoXyjATdfZ2euB/AfKVt/A/FdZeeMeVoAUFH4DL+hScLQ==}
 
-  remark-lint-table-cell-padding@5.0.0:
-    resolution: {integrity: sha512-LNyiHDQZBIOqcQGG1tYsZHW7g0v8OyRmRgDrD5WEsMaAYfM6EiECUokN/Q4py9h4oM/2KUSrdZbtfuZmy87/kA==}
+  remark-lint-table-cell-padding@5.1.1:
+    resolution: {integrity: sha512-6fgVA1iINBoAJaZMOnSsxrF9Qj9+hmCqrsrqZqgJJETjT1ODGH64iAN1/6vHR7dIwmy73d6ysB2WrGyKhVlK3A==}
 
   remark-lint-table-pipe-alignment@4.1.1:
     resolution: {integrity: sha512-9VxivIJaDonrd/Jgkim1oYQ5MIqhWmyJggr2AqtiizwqxT4epRsWmLOz+/sk7PtTGoT/MtwndhlbM3lxuVXFow==}
@@ -12156,12 +12156,12 @@ snapshots:
       unist-util-position: 5.0.0
       unist-util-visit: 5.0.0
 
-  remark-lint-heading-style@4.0.0:
+  remark-lint-heading-style@4.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-heading-style: 3.0.0
       mdast-util-phrasing: 4.1.0
-      unified-lint-rule: 3.0.0
+      unified-lint-rule: 3.0.1
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
       vfile-message: 4.0.2
@@ -12309,14 +12309,14 @@ snapshots:
       unist-util-visit-parents: 6.0.1
       vfile-message: 4.0.2
 
-  remark-lint-table-cell-padding@5.0.0:
+  remark-lint-table-cell-padding@5.1.1:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
       devlop: 1.1.0
       mdast-util-phrasing: 4.1.0
       pluralize: 8.0.0
-      unified-lint-rule: 3.0.0
+      unified-lint-rule: 3.0.1
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
       vfile-message: 4.0.2
@@ -12419,14 +12419,14 @@ snapshots:
       remark-lint-code-block-style: 4.0.1
       remark-lint-emphasis-marker: 4.0.1
       remark-lint-fenced-code-marker: 4.0.1
-      remark-lint-heading-style: 4.0.0
+      remark-lint-heading-style: 4.0.1
       remark-lint-link-title-style: 4.0.1
       remark-lint-list-item-content-indent: 4.0.1
       remark-lint-ordered-list-marker-style: 4.0.1
       remark-lint-ordered-list-marker-value: 4.0.1
       remark-lint-rule-style: 4.0.1
       remark-lint-strong-marker: 4.0.1
-      remark-lint-table-cell-padding: 5.0.0
+      remark-lint-table-cell-padding: 5.1.1
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
