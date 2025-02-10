@@ -97,8 +97,8 @@ importers:
         specifier: 3.15.4
         version: 3.15.4
       remark-lint-heading-style:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       remark-lint-list-item-indent:
         specifier: 4.0.0
         version: 4.0.0
@@ -4946,8 +4946,8 @@ packages:
   remark-lint-hard-break-spaces@4.1.1:
     resolution: {integrity: sha512-AKDPDt39fvmr3yk38OKZEWJxxCOOUBE+96AsBfs+ExS5LW6oLa9041X5ahFDQHvHGzdoremEIaaElursaPEkNg==}
 
-  remark-lint-heading-style@4.0.0:
-    resolution: {integrity: sha512-dQ6Jul5K0+aNUvrq4W7H0+osSoC9hsmwHZqBFq000+eMP/hWJqI8tuudw1rap8HHYuOsKLRbB5q+Fr7G+3Vw+Q==}
+  remark-lint-heading-style@4.0.1:
+    resolution: {integrity: sha512-+rUpJ/N2CGC5xPgZ18XgsCsUBtadgEhdTi0BJPrsFmHPzL22BUHajeg9im8Y7zphUcbi1qFiKuxZd2nzDgZSXQ==}
 
   remark-lint-link-title-style@4.0.1:
     resolution: {integrity: sha512-MtmnYrhjhRXR0zeiyYf/7GBlUF5KAPypJb345KjyDluOhI4Wj4VAXvVQuov/MFc3y8p/1yVwv3QDYv6yue8/wQ==}
@@ -12161,12 +12161,12 @@ snapshots:
       unist-util-position: 5.0.0
       unist-util-visit: 5.0.0
 
-  remark-lint-heading-style@4.0.0:
+  remark-lint-heading-style@4.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-heading-style: 3.0.0
       mdast-util-phrasing: 4.1.0
-      unified-lint-rule: 3.0.0
+      unified-lint-rule: 3.0.1
       unist-util-position: 5.0.0
       unist-util-visit-parents: 6.0.1
       vfile-message: 4.0.2
@@ -12424,7 +12424,7 @@ snapshots:
       remark-lint-code-block-style: 4.0.1
       remark-lint-emphasis-marker: 4.0.1
       remark-lint-fenced-code-marker: 4.0.1
-      remark-lint-heading-style: 4.0.0
+      remark-lint-heading-style: 4.0.1
       remark-lint-link-title-style: 4.0.1
       remark-lint-list-item-content-indent: 4.0.1
       remark-lint-ordered-list-marker-style: 4.0.1
