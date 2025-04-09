@@ -53,6 +53,8 @@ Update your IDE to support remappings. For VS Code:
 
 ## Usage
 
+### Solidity
+
 ```solidity
   // SPDX-License-Identifier: MIT
   pragma solidity 0.8.24;
@@ -67,16 +69,66 @@ Update your IDE to support remappings. For VS Code:
   }
 ```
 
+### JavaScript / TypeScript Client
+
+The package also provides a client for checking address verification status directly from JavaScript or TypeScript applications. This can be useful for frontend applications that need to verify user addresses before displaying certain features or content.
+
+#### ESM / TypeScript
+
+```typescript
+// ES Modules / TypeScript
+import { VerifyClient } from "@krakenfx/verify";
+
+const verifyClient = new VerifyClient();
+const yourAddress = "0x2193981f2d65149644C039c9071f2bE8b5938F0B";
+
+// Check if an address is verified
+const isVerified = await verifyClient.isAddressVerified(yourAddress);
+
+console.log(`Result: ${isVerified ? "✅ Verified" : "❌ Not verified"}`);
+```
+
+#### CommonJS
+
+```javascript
+// CommonJS
+const { VerifyClient } = require("@krakenfx/verify");
+
+const verifyClient = new VerifyClient();
+const yourAddress = "0x2193981f2d65149644C039c9071f2bE8b5938F0B";
+
+// Check if an address is verified
+async function checkVerification() {
+  const isVerified = await verifyClient.isAddressVerified(yourAddress);
+  console.log(`Result: ${isVerified ? "✅ Verified" : "❌ Not verified"}`);
+}
+
+checkVerification();
+```
+
+#### Configuration Options
+
+You can customize the client by passing options to the constructor:
+
+```typescript
+const verifyClient = new VerifyClient({
+  rpcUrl: "https://your-rpc-endpoint.com", // Custom RPC URL
+  verbose: true, // Enable verbose logging
+});
+```
+
 ## What's Included
 
 This package provides access control for verified Kraken users through EAS attestations:
 
 - `KrakenVerifyAccessControl.sol`: Abstract contract with the `onlyVerified` modifier
 - Supporting libraries and interfaces for attestation verification
+- JavaScript/TypeScript client for checking address verification status
 
 ## Requirements
 
 - Solidity 0.8.24
+- Node.js 16+ (for client usage)
 
 ## License
 
