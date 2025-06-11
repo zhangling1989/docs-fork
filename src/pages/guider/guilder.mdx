@@ -1,0 +1,62 @@
+---
+title: Guilder
+description: 向导
+---
+
+import Image from "next/image";
+import { DownloadButton } from "@/components/DownloadButton";
+import { DownloadIcon } from "@/icons/Download";
+import { Callout } from "nextra/components";
+import CopyableCode from "@/components/CopyableCode";
+
+
+# Guider 用法
+
+## 图片引用
+
+![Fees](../../images/ai/1749603891408.jpg)
+
+
+## 下载文件
+
+<div className="mt-6">
+  <DownloadButton
+    sourceFilePath="/downloads/identity-movitech.json"
+    destinationFileName="identity-movitech.json"
+    label="Download identity-movitech"
+  />
+</div>
+
+## 文字链接
+
+<a href="https://docs.inkonchain.com/build/ink-kit">Ink Kit</a>
+
+[OP Stack](https://docs.optimism.io/stack/getting-started)
+
+Click [here](/tools/rpc)
+
+<CopyableCode code="https://explorer.inkonchain.com/address/YOUR_ADDRESS" />
+
+## 表格
+
+| Field                            | Information                                              |
+| -------------------------------- | -------------------------------------------------------- |
+| Network Name                     | Ink                                                      |
+| Description                      | Ink's public mainnet                                     |
+| RPC Endpoint (HTTPS) (primary)   | <CopyableCode code="https://rpc-gel.inkonchain.com" />   |
+| RPC Endpoint (WSS) (primary)     | <CopyableCode code="wss://rpc-gel.inkonchain.com" />     |
+| RPC Endpoint (HTTPS) (secondary) | <CopyableCode code="https://rpc-qnd.inkonchain.com" />   |
+| RPC Endpoint (WSS) (secondary)   | <CopyableCode code="wss://rpc-qnd.inkonchain.com" />     |
+| Chain ID                         | 57073                                                    |
+| Currency Symbol                  | ETH                                                      |
+| Block Explorer                   | <CopyableCode code="https://explorer.inkonchain.com" />  |
+
+## 标识
+
+<Callout type="info" emoji="ℹ️">
+  Use the below bridges at your own risk. Always DYOR!
+</Callout>
+<Callout type="info">
+  Searching for reliable RPC infrastructure?
+  [dRPC](https://drpc.org/chainlist/ink) works seamlessly with Ink and all Superchain networks.
+</Callout>

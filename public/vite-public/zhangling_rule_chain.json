@@ -1,0 +1,414 @@
+{
+  "ruleChain": {
+    "additionalInfo": {
+      "description": ""
+    },
+    "name": "Zhangling Rule Chain",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": false,
+    "configuration": null
+  },
+  "metadata": {
+    "firstNodeIndex": 16,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 61,
+          "layoutY": 810
+        },
+        "type": "org.thingsboard.rule.engine.mail.TbMsgToEmailNode",
+        "name": "测试邮件发送者",
+        "debugMode": false,
+        "configuration": {
+          "fromTemplate": "564218200@qq.com",
+          "toTemplate": "ilifestory@aliyun.com",
+          "ccTemplate": null,
+          "bccTemplate": null,
+          "subjectTemplate": "测试主题",
+          "mailBodyType": "false",
+          "isHtmlTemplate": null,
+          "bodyTemplate": "测试body"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 379,
+          "layoutY": 820
+        },
+        "type": "org.thingsboard.rule.engine.mail.TbSendEmailNode",
+        "name": "发送邮件",
+        "debugMode": false,
+        "configuration": {
+          "useSystemSmtpSettings": true,
+          "smtpProtocol": "smtp",
+          "smtpHost": "smtp.qq.com",
+          "smtpPort": 465,
+          "timeout": 10000,
+          "enableTls": false,
+          "tlsVersion": "TLSv1.2",
+          "enableProxy": false,
+          "proxyHost": null,
+          "proxyPort": null,
+          "proxyUser": null,
+          "proxyPassword": null,
+          "username": "564218200",
+          "password": "Zhangling@"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 375,
+          "layoutY": 742
+        },
+        "type": "org.thingsboard.rule.engine.rest.TbRestApiCallNode",
+        "name": "发送短信",
+        "debugMode": false,
+        "configuration": {
+          "restEndpointUrlPattern": "http://172.26.25.8:7011/remote/sendMessage",
+          "requestMethod": "POST",
+          "useSimpleClientHttpFactory": false,
+          "ignoreRequestBody": false,
+          "enableProxy": false,
+          "useSystemProxyProperties": false,
+          "proxyScheme": null,
+          "proxyHost": null,
+          "proxyPort": 0,
+          "proxyUser": null,
+          "proxyPassword": null,
+          "readTimeoutMs": 0,
+          "maxParallelRequestsCount": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "useRedisQueueForMsgPersistence": false,
+          "trimQueue": false,
+          "maxQueueSize": 0,
+          "credentials": {
+            "type": "anonymous"
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 60,
+          "layoutY": 738
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "发送短信参数",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "msg.templateCode = \"SMS_465075256\"\nmsg.phones = [\"15850164351\"]\nmsg.signName = \"碰撞报警提醒\"\nmsg.params = {\n    createTime: \"2024-07-03 09:42\",\n    location: \"苏州\",\n    level: \"告警\",\n    plateNo: \"苏U18B76\"\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 957,
+          "layoutY": 882
+        },
+        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "name": "log",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "return 'Incoming message:=======================>\\n' + JSON.stringify(msg) + '\\nIncoming metadata:=======================>\\n' + JSON.stringify(metadata);"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1452,
+          "layoutY": 626
+        },
+        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "name": "创建告警",
+        "debugMode": false,
+        "configuration": {
+          "alarmDetailsBuildJs": "// var details = {};\n// if (metadata.prevAlarmDetails) {\n//     details = JSON.parse(msg.warnInfo);\n//     //remove prevAlarmDetails from metadata\n//     delete metadata.prevAlarmDetails;\n//     //now metadata is the same as it comes IN this rule node\n// }\n\n// metadata.ts = msg.warnInfo[0].ts3\nreturn msg.details;",
+          "useMessageAlarmData": false,
+          "alarmType": "General Alarm",
+          "severity": "WARNING",
+          "propagate": false,
+          "relationTypes": [],
+          "propagateToOwner": false,
+          "propagateToTenant": false,
+          "dynamicSeverity": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1194,
+          "layoutY": 480
+        },
+        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "name": "清除",
+        "debugMode": false,
+        "configuration": {
+          "alarmDetailsBuildJs": "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = msg.warnInfo;\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+          "alarmType": "General Alarm"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1017,
+          "layoutY": 313
+        },
+        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "name": "判断告警",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "return msg.isWarn;"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1426,
+          "layoutY": 309
+        },
+        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "name": "创建告警",
+        "debugMode": false,
+        "configuration": {
+          "alarmDetailsBuildJs": "// var details = {};\n// if (metadata.prevAlarmDetails) {\n//     details = JSON.parse(msg.warnInfo);\n//     //remove prevAlarmDetails from metadata\n//     delete metadata.prevAlarmDetails;\n//     //now metadata is the same as it comes IN this rule node\n// }\n\n//metadata.ts = msg.details[0].ts3.toString()\nreturn msg.warnInfo;",
+          "useMessageAlarmData": false,
+          "alarmType": "General Alarm",
+          "severity": "WARNING",
+          "propagate": false,
+          "relationTypes": [],
+          "propagateToOwner": false,
+          "propagateToTenant": false,
+          "dynamicSeverity": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 54,
+          "layoutY": 323
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode",
+        "name": "设备ID属性映射",
+        "debugMode": false,
+        "configuration": {
+          "fieldsMapping": {
+            "id": "entityId"
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 437,
+          "layoutY": 472
+        },
+        "type": "org.thingsboard.rule.engine.delay.TbMsgDelayNode",
+        "name": "delay",
+        "debugMode": false,
+        "configuration": {
+          "useMetadataPeriodInSecondsPatterns": true,
+          "periodInSeconds": 60,
+          "periodInSecondsPattern": "${ss_delay}",
+          "maxPendingMsgs": 1
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 613,
+          "layoutY": 313
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "playload",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "msg.entityId = metadata.entityId\nmsg.deviceName = metadata.deviceName\nmsg.ts = metadata.ts\nmsg.deviceType = metadata.deviceType\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 320,
+          "layoutY": 313
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "ori",
+        "debugMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "clientAttributeNames": [],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [
+            "delay"
+          ],
+          "latestTsKeyNames": [],
+          "getLatestValueWithTs": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 437,
+          "layoutY": 542
+        },
+        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "name": "test",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "if(parseInt(metadata.ts / 1000) % 10 == 0) {\r\n    if(metadata.ts >(parseInt(metadata.ts / 1000) * 1000 + 500) && metadata.ts < (parseInt(metadata.ts / 1000) * 1000 + 505)){\r\n        return true;\r\n    }\r\n    return false;\r\n}\r\nreturn false;"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 821,
+          "layoutY": 474
+        },
+        "type": "org.thingsboard.rule.engine.rest.TbRestApiCallNode",
+        "name": "AI测试",
+        "debugMode": false,
+        "configuration": {
+          "restEndpointUrlPattern": "http://172.26.16.41:9600/sensor/warn",
+          "requestMethod": "POST",
+          "useSimpleClientHttpFactory": false,
+          "ignoreRequestBody": false,
+          "enableProxy": false,
+          "useSystemProxyProperties": false,
+          "proxyScheme": null,
+          "proxyHost": null,
+          "proxyPort": 0,
+          "proxyUser": null,
+          "proxyPassword": null,
+          "readTimeoutMs": 0,
+          "maxParallelRequestsCount": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "useRedisQueueForMsgPersistence": false,
+          "trimQueue": false,
+          "maxQueueSize": 0,
+          "credentials": {
+            "type": "anonymous"
+          }
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 679,
+          "layoutY": 153
+        },
+        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "name": "msg type switch",
+        "debugMode": false,
+        "configuration": {
+          "version": 0
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 340,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.profile.TbDeviceProfileNode",
+        "name": "device profile",
+        "debugMode": false,
+        "configuration": {
+          "persistAlarmRulesState": false,
+          "fetchAlarmRulesStateOnStart": false
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1014,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "name": "save ts data",
+        "debugMode": false,
+        "configuration": {
+          "defaultTTL": 0,
+          "skipLatestPersistence": false,
+          "useServerTs": false
+        }
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 3,
+        "toIndex": 2,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 6,
+        "toIndex": 5,
+        "type": "Cleared"
+      },
+      {
+        "fromIndex": 6,
+        "toIndex": 8,
+        "type": "False"
+      },
+      {
+        "fromIndex": 7,
+        "toIndex": 6,
+        "type": "True"
+      },
+      {
+        "fromIndex": 9,
+        "toIndex": 12,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 10,
+        "toIndex": 11,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 11,
+        "toIndex": 14,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 12,
+        "toIndex": 10,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 14,
+        "toIndex": 7,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 15,
+        "toIndex": 17,
+        "type": "Post telemetry"
+      },
+      {
+        "fromIndex": 15,
+        "toIndex": 9,
+        "type": "Post telemetry"
+      },
+      {
+        "fromIndex": 16,
+        "toIndex": 15,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}

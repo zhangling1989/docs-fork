@@ -11,8 +11,8 @@ export const InkLogo: React.FC<InkLogoProps> = ({
   const { resolvedTheme } = useTheme();
   const logoSrc =
     resolvedTheme === "dark"
-      ? "/logo/ink-logo-dark.svg"
-      : "/logo/ink-logo-light.svg";
+      ? "/logo/loginlogo.png"
+      : "/logo/loginlogo.png";
 
   return (
     <Image

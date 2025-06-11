@@ -45,24 +45,28 @@
     "type": "page",
     "href": "/tools/faucets"
   },
-  "--- GENERAL": {
+  "+++ AI": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- AI": {
+    "title": "AI",
+    "type": "separator"
+  },
+  "ai": {
+    "title": "AI",
+    "display": "children"
+  },
+  "+++ General": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- General": {
     "title": "General",
     "type": "separator"
   },
   "general": {
     "title": "General",
-    "display": "children"
-  },
-  "+++ Build on Ink": {
-    "title": "",
-    "type": "separator"
-  },
-  "--- Build On Ink": {
-    "title": "Build On Ink",
-    "type": "separator"
-  },
-  "build": {
-    "title": "Build on Ink",
     "display": "children"
   },
   "+++ Tools": {
@@ -99,6 +103,21 @@
   },
   "work-with-ink": {
     "title": "Work with Ink",
+    "display": "children",
+    "theme": {
+      "pagination": true
+    }
+  },
+  "+++ Guider": {
+    "title": "",
+    "type": "separator"
+  },
+  "--- Guider": {
+    "title": "Guider",
+    "type": "separator"
+  },
+  "guider": {
+    "title": "Guider",
     "display": "children",
     "theme": {
       "pagination": true
